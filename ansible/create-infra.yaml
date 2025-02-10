@@ -36,5 +36,5 @@
 
     - name: clone repo
       ansible.builtin.git:
-        repo: CICD
-        dst: /home/ec2-user
+        repo: https://github.com/noahaviv/CICD.git
+        dest: /home/ec2-user
