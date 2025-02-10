@@ -43,6 +43,18 @@
       ansible.builtin.reboot:
         reboot_timeout: 60 
 
+    - name: build docker image
+      community.docker.docker_image_build:
+        name: haviv_image_CICD
+        path: /home/ec2-user/images
+        dockerfile: Dockerfile
+
+    - name: create container
+      community.docker.docker_container:
+      name: haviv
+      image: haviv_image_CICD
+      
+
       
 
        
