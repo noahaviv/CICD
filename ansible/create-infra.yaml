@@ -12,9 +12,8 @@
       
     - name: install epel-release package , yum-utils , git , pip
       yum:
-        name: "{{ item }}"
         state: present
-        loop:
+        name:
           - epel-release
           - yum-utils
           - git
