@@ -1,13 +1,12 @@
 ---
 - name: build app server
   hosts: host
-  
+  become: true
   tasks:
     - name: update package cache
       ansible.builtin.yum:
         name: '*'
         state: latest
-      become: true
       
     - name: install epel-release package , yum-utils , git ,pip
       ansible.builtin.yum:
@@ -17,7 +16,6 @@
           - git
           - python-pip
         state: latest
-      become: true
   
     - name: add docker-ce repo
       ansible.builtin.shell: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
@@ -30,11 +28,9 @@
           - containerd.io
           - docker-compose 
         state: latest
-        become: true
       
     - name: start docker deamon
       ansible.builtin.service:
         state: started
         name: docker
-      become: true
       
