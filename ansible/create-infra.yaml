@@ -32,7 +32,7 @@
     - name: clone repo
       ansible.builtin.git:
         repo: https://github.com/noahaviv/CICD.git
-        dest: /home/ec2-user/
+        dest: /home/ec2-user/CICD
 
     - name: add user to docker group
       ansible.builtin.command: usermod -a -G docker ec2-user
