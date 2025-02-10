@@ -10,14 +10,13 @@
         name: '*'
         state: latest
       
-    - name: install epel-release package , yum-utils , git , pip
-      yum:
-        state: present
+    - name: yum-utils , git , pip
+      ansible.builtin.yum:
         name:
-          - epel-release
           - yum-utils
           - git
           - python-pip
+        state: latest
   
     - name: add docker-ce repo
       ansible.builtin.shell: yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
