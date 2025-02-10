@@ -44,7 +44,7 @@
         reboot_timeout: 60 
         
     - name: build docker image
-      community.docker.docker_image_build:
+      community.docker.docker_image:
         name: Flaskapp
         api_version: 1.44
         path: /home/ec2-user/image
