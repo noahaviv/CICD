@@ -44,15 +44,17 @@
         reboot_timeout: 60 
         
     - name: build docker image
-      community.docker.docker_image:
-        name: haviv_image_CICD
-        source: local
+      community.docker.docker_image_build:
+        name: Flaskapp
+        api_version: 1.44
+        path: /home/ec2-user/image
+        source: build
         
 
     - name: create container
       community.docker.docker_container:
         name: haviv
-        image: haviv_image_CICD
+        image: Flaskapp
       
 
       
