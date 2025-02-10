@@ -24,19 +24,6 @@
           - docker
         state: latest
       
-    - name: install docker packages
-      ansible.builtin.yum:
-        name:
-          - docker-ce
-          
-    - name: install docker packages
-      ansible.builtin.yum:
-        name:
-          - docker-ce-cli
-          - containerd.io
-          - docker-compose
-        state: latest
-      
     - name: start docker deamon
       ansible.builtin.service:
         state: started
