@@ -27,6 +27,10 @@
       ansible.builtin.yum:
         name:
           - docker-ce
+          
+    - name: install docker packages
+      ansible.builtin.yum:
+        name:
           - docker-ce-cli
           - containerd.io
           - docker-compose
