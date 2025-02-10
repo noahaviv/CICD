@@ -39,4 +39,9 @@
     - name: add user to docker group
       ansible.builtin.command: usermod -a -G docker ec2-user
 
+    - name: restart server
+      ansible.builtin.reboot:
+
+      
+
        
