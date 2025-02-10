@@ -51,8 +51,8 @@
 
     - name: create container
       community.docker.docker_container:
-      name: haviv
-      image: haviv_image_CICD
+        name: haviv
+        image: haviv_image_CICD
       
 
       
