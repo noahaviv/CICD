@@ -1,4 +1,4 @@
 [hosts]
 haviv_prod_cicd
 [all:vars]
-ansible_private_key_file=/home/ec2-user/.ssh/authorized_keys
+ansible_private_key_file=/home/ec2-user/.ssh/id_rsa
