@@ -19,7 +19,9 @@
         state: latest
         
     - name: install docker 
-      ansible.builtin.command: yum install docker
+      ansible.builtin.yum:
+        name:
+          - docker
       
     - name: install docker packages
       ansible.builtin.yum:
