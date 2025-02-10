@@ -26,7 +26,7 @@
       
     - name: start docker deamon
       ansible.builtin.service:
-        state: started
+        state: present
         name: docker
 
     - name: clone repo
@@ -37,6 +37,7 @@
     - name: add user to docker group
       ansible.builtin.command: usermod -a -G docker ec2-user
 
-#    - name: build docker image
-#     community.docker.docker_image_build:
- #       name: 
+    - name: build docker image 
+      community.docker.docker_image_build:
+       name: haviv_image_CICD
+       
