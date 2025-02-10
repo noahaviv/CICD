@@ -10,7 +10,7 @@
         name: '*'
         state: latest
       
-    - name: install epel-release package , yum-utils , git ,pip
+    - name: install epel-release package , yum-utils , git , pip
       yum:
         name: "{{ item }}"
         state: present
