@@ -46,7 +46,6 @@
     - name: build docker image
       community.docker.docker_image:
         name: haviv_image_CICD
-        path: /home/ec2-user/images
         source: local
         
 
