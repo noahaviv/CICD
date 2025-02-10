@@ -2,7 +2,7 @@
 
 
 - name: build app server
-  hosts: host
+  hosts: hosts
   become: true
   tasks:
     - name: update package cache
