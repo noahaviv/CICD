@@ -18,12 +18,10 @@
           - python-pip
         state: latest
   
-    - name: add docker-ce repo
-      ansible.builtin.command: yum install docker
-  
     - name: install docker packages
       ansible.builtin.yum:
         name:
+          - docker
           - docker-ce
           - docker-ce-cli
           - containerd.io
